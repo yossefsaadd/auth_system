@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zamzor - Home</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/v4-shims.min.css" />
+  
+
+  <link rel="stylesheet" href="css/zamzor-main.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+        <a href="zamzor-main.html">Zamzor <i class="fas fa-globe"></i></a>
+     </div>
+
+
+     <div class="nav-language">
+        <select id="lang-switch">
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+      </div>
+
+
+      <div class="nav-search">
+        <input type="text" id="search-input" placeholder="Search products...">
+         <button><i class="fas fa-search"></i></button>
+    </div>
+
+
+    <div class="nav-account">
+      <div class="account-menu">
+        <span id="account-text">Hello, Sign in</span>
+        <p>Account & Lists <i class="fas fa-user"></i></p>
+        <div class="dropdown">
+          <a href="../email/login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a href="../email/register.html"><i class="fas fa-user-plus"></i> Create Account</a>
+          <a href="#"><i class="fas fa-box"></i> Orders</a>
+          <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="orders">
+      <a href="#">Orders <i class="fas fa-box"></i></a>
+    </div>
+
+
+    <div class="nav-cart" onclick="goToCart()">
+      <i class="fas fa-shopping-cart"></i>
+      <a href="#" class="cart-text">Cart</a>
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Zamzor</h1>
+      <p>Your one-stop shop for all your needs.</p>
+      <button ><a href="./main-main.php">Shop Now</a></button>
+    </section>
+  </main>
+
+
+  <script src="js/zamzor-main.js" defer></script>
+
+</body>
+</html>

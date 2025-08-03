@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+   <body>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("verified") === "1") {
+        alert("✅ Your account has been activated! You can now log in.");
+      }
+    </script>
+
+    <div class="con">
+      <h1>Zamzor</h1>
+      <div class="form-box" id="form-login">
+        <form action="./auth/login.php" method="POST">
+          <h2>Login</h2>
+          <input type="email" name="email" placeholder="Email" required />
+
+        <div class="password-container">
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword('password', this)">👁</span>
+        </div>
+
+          <button type="submit" class="btn">Login</button>
+          <p class="text">
+            Forgot your password? <a href="./reset/email_input.php">Reset it</a>
+          </p>
+          <p class="text">
+            Don't have an account? <a href="./register/step1_email.php">Register</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+function togglePassword(fieldId, icon) {
+    const input = document.getElementById(fieldId);
+    const isVisible = input.type === "text";
+    
+    input.type = isVisible ? "password" : "text";
+    icon.textContent = isVisible ? "👁" : "👁‍🗨"; 
+}
+</script>
+
+  </body>
+</html>
